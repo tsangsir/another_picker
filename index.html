@@ -343,6 +343,124 @@
     </div>
 
 <script>
+    cookies = document.cookie.split(";");
+
+    for (var idx in cookies) {
+        c=cookies[idx].trim().split("=");
+        if (c[0] == "five_fire_list" && c[1] != "") {
+            var sel = document.getElementById("5-star-fire");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+	}
+        if (c[0] == "five_wind_list" && c[1] != "") {
+            var sel = document.getElementById("5-star-wind");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "five_water_list" && c[1] != "") {
+            var sel = document.getElementById("5-star-water");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "five_earth_list" && c[1] != "") {
+            var sel = document.getElementById("5-star-earth");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "five_shadow_list" && c[1] != "") {
+            var sel = document.getElementById("5-star-shadow");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "five_thunder_list" && c[1] != "") {
+            var sel = document.getElementById("5-star-thunder");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "five_crystal_list" && c[1] != "") {
+            var sel = document.getElementById("5-star-crystal");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "five_none_list" && c[1] != "") {
+            var sel = document.getElementById("5-star-none");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "four_fire_list" && c[1] != "") {
+            var sel = document.getElementById("4-star-fire");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+	}
+        if (c[0] == "four_wind_list" && c[1] != "") {
+            var sel = document.getElementById("4-star-wind");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "four_water_list" && c[1] != "") {
+            var sel = document.getElementById("4-star-water");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "four_earth_list" && c[1] != "") {
+            var sel = document.getElementById("4-star-earth");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "four_shadow_list" && c[1] != "") {
+            var sel = document.getElementById("4-star-shadow");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "four_thunder_list" && c[1] != "") {
+            var sel = document.getElementById("4-star-thunder");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "four_crystal_list" && c[1] != "") {
+            var sel = document.getElementById("4-star-crystal");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+        if (c[0] == "four_none_list" && c[1] != "") {
+            var sel = document.getElementById("4-star-none");
+            var reload = c[1].split(",");
+            for (s in reload) {
+                sel.querySelector('option[value="' + reload[s]  + '"]').selected = true;
+            }
+        }
+    }
+
     $("#5-star-fire").imagepicker({
         hide_select: true,
         show_label: true
@@ -672,8 +790,105 @@
 
         var img = canvas.toDataURL("image/png");
         document.write('<img src="' + img + '"/>');
-    });
 
+        if (five_fire_list.length > 0) {
+            document.cookie="five_fire_list=" + five_fire_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="five_fire_list=";
+        }
+        if (five_wind_list.length > 0) {
+            document.cookie="five_wind_list=" + five_wind_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="five_wind_list=";
+        }
+        if (five_water_list.length > 0) {
+            document.cookie="five_water_list=" + five_water_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="five_water_list=";
+        }
+        if (five_earth_list.length > 0) {
+            document.cookie="five_earth_list=" + five_earth_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="five_earth_list=";
+        }
+        if (five_shadow_list.length > 0) {
+            document.cookie="five_shadow_list=" + five_shadow_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="five_shadow_list=";
+        }
+        if (five_thunder_list.length > 0) {
+            document.cookie="five_thunder_list=" + five_thunder_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="five_thunder_list=";
+        }
+        if (five_crystal_list.length > 0) {
+            document.cookie="five_crystal_list=" + five_crystal_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="five_crystal_list=";
+        }
+        if (five_none_list.length > 0) {
+            document.cookie="five_none_list=" + five_none_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="five_none_list=";
+        }
+        if (four_fire_list.length > 0) {
+            document.cookie="four_fire_list=" + four_fire_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="four_fire_list=";
+        }
+        if (four_wind_list.length > 0) {
+            document.cookie="four_wind_list=" + four_wind_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="four_wind_list=";
+        }
+        if (four_water_list.length > 0) {
+            document.cookie="four_water_list=" + four_water_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="four_water_list=";
+        }
+        if (four_earth_list.length > 0) {
+            document.cookie="four_earth_list=" + four_earth_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="four_earth_list=";
+        }
+        if (four_shadow_list.length > 0) {
+            document.cookie="four_shadow_list=" + four_shadow_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="four_shadow_list=";
+        }
+        if (four_thunder_list.length > 0) {
+            document.cookie="four_thunder_list=" + four_thunder_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="four_thunder_list=";
+        }
+        if (four_crystal_list.length > 0) {
+            document.cookie="four_crystal_list=" + four_crystal_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="four_crystal_list=";
+        }
+        if (four_none_list.length > 0) {
+            document.cookie="four_none_list=" + four_none_list + "; max-age=1000000";
+        }
+        else {
+            document.cookie="four_none_list=";
+        }
+
+    });
 </script>
 </body>
 </html>
